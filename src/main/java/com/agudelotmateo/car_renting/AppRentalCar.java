@@ -1,11 +1,17 @@
 package com.agudelotmateo.car_renting;
 
-/**
- * Hello world!
- *
- */
 public class AppRentalCar {
+    private static AppRentalCar instance = null;
+
+    private AppRentalCar() { }
+
+    public static AppRentalCar getInstance() {
+        if (instance == null)
+            instance = new AppRentalCar();
+        return instance;
+    }
+
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+
     }
 }
